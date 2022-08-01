@@ -1,151 +1,73 @@
 > show dbs
-admin           0.000GB
-config          0.000GB
-local           0.000GB
-mydb            0.000GB
-shubham         0.000GB
-test            0.000GB
 
-use Human_Resource
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+mydb    0.000GB
+test    0.000GB
 
-switched to db Human_Resource
+> use Human_Resourse
 
-db.employee.insertMany([
-    {
-        "firstName": "John",
-        "lastName": "Doe",
-        "salary": "25000",
-        "department": "HR",
-        "lastCompany": "X",
-        "lastSalary": "10000",
-        "overallExp": "2",
-        "contactInfo": "1234567890",
-        "yearGrad": "2016",
-        "gradStream": "CSE"
-    },
-    {
-        "firstName": "Rohan",
-        "lastName": "Jame",
-        "salary": "30000",
-        "department": "Technical",
-        "lastCompany": "Y",
-        "lastSalary": "15000",
-        "overallExp": "1",
-        "contactInfo": "1234567860",
-        "yearGrad": "2015",
-        "gradStream": "CSE"
-    },
-    {
-        "firstName": "Jame",
-        "lastName": "Doe",
-        "salary": "35000",
-        "department": "Accounts",
-        "lastCompany": "Z",
-        "lastSalary": "20000",
-        "overallExp": "1",
-        "contactInfo": "123567890",
-        "yearGrad": "2019",
-        "gradStream": "ECE"
-    },
-    {
-        "firstName": "Sao",
-        "lastName": "Avika",
-        "salary": "30000",
-        "department": "Sales",
-        "lastCompany": "Y",
-        "lastSalary": "15000",
-        "overallExp": "2",
-        "contactInfo": "1234567860",
-        "yearGrad": "2015",
-        "gradStream": "CSE"
-    },
-    {
-        "firstName": "Jame",
-        "lastName": "roh",
-        "salary": "35000",
-        "department": "Accounts",
-        "lastCompany": "Z",
-        "lastSalary": "15000",
-        "overallExp": "2",
-        "contactInfo": "123567890",
-        "yearGrad": "2019",
-        "gradStream": "EEE"
-    }
-])
+switched to db Human_Resourse
+
+> db.employee.insertMany([{
+... "firstName" : "Shubham",
+... "lastName": "Kumar",
+... "Salary": 35500,
+... "department": "HR",
+... "overallExp": 2,
+... "contactInfo": 5533226614,
+... "yearGrade": 2022,
+... "Address": "Jamui"
+... },{
+... "firstName": "Milan",
+... "lastName" : "Kumar",
+... "Salary": 150000,
+... "department": "Sell",
+... "overallExp": 5,
+... "contactInfo": 3221515667,
+... "yearGrade": 2018,
+... "Address": "Patna"
+... },{
+... "firstName": "Prachi",
+... "lastName" : "Singh",
+... "department": "Class XI",
+... "contactInfo": 8866224455,
+... "Address" : "Laxmipur"
+... },{
+... "firstName" : "Surbhi",
+... "lastName" : "Kumari",
+... "Salary": 500000,
+... "Department" : "B.A Hons",
+... "contactInfo": 2022,
+... "yearGrade": 2022,
+... "Address" : "Deoghar"
+... },{
+... "firstName" : "Sharad",
+... "lastName" : "Kumar",
+... "salary" : "65000",
+... "department" : "Teacher",
+... "overallExp": 5,
+... "contactInfo": 4563214789,
+... "yearGrade": 2017,
+... "Address": "Dhanbad"
+... },{
+... "firstName": "Rohit",
+... "lastName": "Gupta",
+... "salary": 450000,
+... "department": "Mining",
+... "contactInfo": 5588226644,
+... "yearGrade": 2014,
+... "overallExp": 8,
+... "Address": "Ranchi"}])
 {
         "acknowledged" : true,
         "insertedIds" : [
-                ObjectId("62e74aeb225d1ffc3fbdeecb"),
-                ObjectId("62e74aeb225d1ffc3fbdeecc"),
-                ObjectId("62e74aeb225d1ffc3fbdeecd"),
-                ObjectId("62e74aeb225d1ffc3fbdeece"),
-                ObjectId("62e74aeb225d1ffc3fbdeecf")
+                ObjectId("62e7c41d363005bc114376d5"),
+                ObjectId("62e7c41d363005bc114376d6"),
+                ObjectId("62e7c41d363005bc114376d7"),
+                ObjectId("62e7c41d363005bc114376d8"),
+                ObjectId("62e7c41d363005bc114376d9"),
+                ObjectId("62e7c41d363005bc114376da")
         ]
-}
-
-
-db.employee.find().pretty(){
-        "_id" : ObjectId("62e74aeb225d1ffc3fbdeecb"),
-        "firstName" : "John",
-        "lastName" : "Doe",
-        "salary" : "25000",
-        "department" : "HR",
-        "lastCompany" : "X",
-        "lastSalary" : "10000",
-        "overallExp" : "2",
-        "contactInfo" : "1234567890",
-        "yearGrad" : "2016",
-        "gradStream" : "CSE"
-}
-{
-        "_id" : ObjectId("62e74aeb225d1ffc3fbdeecc"),
-        "firstName" : "Rohan",
-        "lastName" : "Jame",
-        "salary" : "30000",
-        "department" : "Technical",
-        "lastCompany" : "Y",
-        "lastSalary" : "15000",
-        "overallExp" : "1",
-        "contactInfo" : "1234567860",
-        "yearGrad" : "2015",
-        "gradStream" : "CSE"
-}
-{
-        "_id" : ObjectId("62e74aeb225d1ffc3fbdeecd"),
-        "firstName" : "Jame",
-        "lastName" : "Doe",
-        "salary" : "35000",
-        "department" : "Accounts",
-        "lastCompany" : "Z",
-        "lastSalary" : "20000",
-        "overallExp" : "1",
-        "contactInfo" : "123567890",
-        "yearGrad" : "2019",
-        "gradStream" : "ECE"
-}
-{
-        "_id" : ObjectId("62e74aeb225d1ffc3fbdeece"),
-        "firstName" : "Sao",
-        "lastName" : "Avika",
-        "salary" : "30000",
-        "department" : "Sales",
-        "lastCompany" : "Y",
-        "lastSalary" : "15000",
-        "overallExp" : "2",
-        "contactInfo" : "1234567860",
-        "yearGrad" : "2015",
-        "gradStream" : "CSE"
-}
-{
-        "_id" : ObjectId("62e74aeb225d1ffc3fbdeecf"),
-        "firstName" : "Jame",
-        "lastName" : "roh",
-        "salary" : "35000",
-        "department" : "Accounts",
-        "lastCompany" : "Z",
-        "lastSalary" : "15000",
-        "overallExp" : "2",
-        "contactInfo" : "123567890",
-        "yearGrad" : "2019",
-        "gradStream" : "EEE"
 }
