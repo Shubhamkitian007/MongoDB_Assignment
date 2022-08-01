@@ -137,3 +137,35 @@ db.employee.find().pretty()
         "overallExp" : 8,
         "Address" : "Ranchi"
 }
+
+// Q 2. Salary greater than 50000
+> db.employee.find({salary: {$gt: 50000}}).pretty()
+{
+        "_id" : ObjectId("62e7c41d363005bc114376da"),
+        "firstName" : "Rohit",
+        "lastName" : "Gupta",
+        "salary" : 450000,
+        "department" : "Mining",
+        "contactInfo" : 5588226644,
+        "yearGrade" : 2014,
+        "overallExp" : 8,
+        "Address" : "Ranchi"
+}
+
+// Q 3 . overallExp greater than 2
+
+> db.employee.find({overallExp: {$gt: "3"}}).pretty()
+> db.employee.find({overallExp: {$gt: "1"}}).pretty()
+
+> db.employee.find({$and: [{yearGrade: {$gt: 2018}}, {overallExp: {$gt: 1}}]}).pretty()
+{
+        "_id" : ObjectId("62e7c41d363005bc114376d5"),
+        "firstName" : "Shubham",
+        "lastName" : "Kumar",
+        "Salary" : 35500,
+        "department" : "HR",
+        "overallExp" : 2,
+        "contactInfo" : 5533226614,
+        "yearGrade" : 2022,
+        "Address" : "Jamui"
+}
